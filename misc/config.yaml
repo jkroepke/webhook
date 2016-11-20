@@ -1,0 +1,5 @@
+'/deploy':
+  command: '/opt/puppetlabs/puppet/bin/r10k deploy environment'
+    arguments:
+      environment: ''
+      extra: '-p'

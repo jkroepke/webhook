@@ -1,0 +1,12 @@
+[Unit]
+Description=Generic Webhook
+
+[Service]
+Environment=HOME=/tmp
+Environment=LISTEN=0.0.0.0
+Environment=LISTEN=9000
+EnvironmentFile=-/etc/sysconfig/webhook
+ExecStart=/usr/local/bin/webhook.py ${LISTEN} ${PORT}
+
+[Install]
+WantedBy=multi-user.target
